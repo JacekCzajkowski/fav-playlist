@@ -31,7 +31,9 @@ export default {
     const { user } = getUser()
 
     const ownership = computed(() => {
-      return playlist.value && user.value && user.value.uid == playlist.value.userId
+      return playlist.value 
+      && user.value 
+      && user.value.uid == playlist.value.userId
     })
 
     return { error, playlist, ownership }
