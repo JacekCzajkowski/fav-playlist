@@ -12,9 +12,8 @@ const login = async (email, password) => {
     const res = await projectAuth.signInWithEmailAndPassword(email, password)
     error.value = null
     isPending.value = false
-    return res
-  }
-  catch(err) {
+    
+  } catch(err) {
     console.log(err.message)
     error.value = 'Incorrect login credentials'
     isPending.value = false
